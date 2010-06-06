@@ -1,8 +1,8 @@
 import sbt._
 import java.io.File
+import com.weiglewilczek.bnd4sbt._
 
-
-protected class StandardProject(info: ProjectInfo) extends DefaultProject(info) {
+protected class StandardProject(info: ProjectInfo) extends DefaultProject(info) with BNDPlugin {
   override def dependencyPath = "lib"
   override def disableCrossPaths = true
 
